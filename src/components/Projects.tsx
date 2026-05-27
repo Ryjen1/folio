@@ -74,17 +74,7 @@ export default function Projects() {
           ))}
         </div>
 
-        <div className="mt-12">
-          <a
-            href="https://github.com/Ryjen1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="pill-btn pill-btn-ghost"
-          >
-            <span>View All Projects</span>
-            <span aria-hidden="true">↗</span>
-          </a>
-        </div>
+
       </div>
     </section>
   );
