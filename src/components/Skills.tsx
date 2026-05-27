@@ -23,32 +23,30 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-4 bg-surface/30">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Skills & <span className="gradient-text">Technologies</span>
+    <section id="skills" className="px-6 py-24 sm:py-32 border-t border-white/[0.06]">
+      <div className="mx-auto max-w-5xl">
+        <div className="space-y-3 max-w-2xl mb-12">
+          <p className="eyebrow">Expertise</p>
+          <h2 className="text-3xl font-medium tracking-tight sm:text-5xl">
+            Skills & <span className="font-serif italic">technologies</span>
           </h2>
-          <p className="text-text-muted max-w-2xl mx-auto">
-            Technologies and tools I use to design, develop and deploy modern
-            full-stack applications.
-          </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mt-4" />
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
           {skillCategories.map((cat) => (
             <div
               key={cat.title}
-              className="p-6 rounded-xl bg-surface border border-border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1"
+              className="liquid-glass rounded-2xl p-5 space-y-3 group hover:border-white/20 transition-colors"
             >
-              <h3 className="font-semibold text-lg mb-2">{cat.title}</h3>
-              <p className="text-text-muted text-sm mb-4">{cat.description}</p>
-              <div className="flex flex-wrap gap-2">
+              <p className="eyebrow">{cat.title}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {cat.description}
+              </p>
+              <div className="flex flex-wrap gap-2 pt-1">
                 {cat.skills.map((s) => (
                   <span
                     key={s}
-                    className="px-3 py-1 text-xs rounded-full bg-primary/10 text-primary-light border border-primary/20"
+                    className="px-2.5 py-0.5 text-xs rounded-full border border-white/15 text-muted-foreground font-mono tracking-wider"
                   >
                     {s}
                   </span>

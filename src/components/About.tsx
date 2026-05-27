@@ -1,33 +1,30 @@
 export default function About() {
   return (
-    <section id="about" className="py-24 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            About <span className="gradient-text">Me</span>
+    <section id="about" className="px-6 py-24 sm:py-32 border-t border-white/[0.06]">
+      <div className="mx-auto max-w-5xl">
+        <div className="space-y-3 max-w-2xl mb-12">
+          <p className="eyebrow">About Me</p>
+          <h2 className="text-3xl font-medium tracking-tight sm:text-5xl">
+            Building <span className="font-serif italic">digital experiences</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h3 className="text-2xl font-semibold">
-              Building Digital Experiences
-            </h3>
-            <p className="text-text-muted leading-relaxed">
+        <div className="grid md:grid-cols-2 gap-12">
+          <div className="space-y-6 text-muted-foreground leading-relaxed text-sm sm:text-base">
+            <p>
               I&apos;m Maryjane Okafor, a Full Stack Developer based in Lagos,
               Nigeria. I specialize in building scalable web applications,
               decentralized solutions, and modern user experiences using React,
               Next.js, Spring Boot, and Tailwind CSS.
             </p>
-            <p className="text-text-muted leading-relaxed">
+            <p>
               With a strong foundation in both traditional web development and
               blockchain technology, I bring a unique perspective to every
-              project. I&apos;m passionate about writing clean, maintainable code and
-              translating complex problems into intuitive, user-friendly
+              project. I&apos;m passionate about writing clean, maintainable code
+              and translating complex problems into intuitive, user-friendly
               solutions.
             </p>
-            <p className="text-text-muted leading-relaxed">
+            <p>
               Beyond coding, I&apos;m deeply interested in Web3 innovation, AI
               agents, and emerging technologies. I enjoy exploring new
               frameworks, contributing to open-source projects, and staying at
@@ -44,12 +41,10 @@ export default function About() {
             ].map((card) => (
               <div
                 key={card.label}
-                className="p-4 rounded-xl bg-surface border border-border hover:border-primary/50 transition-colors"
+                className="liquid-glass rounded-2xl p-5 space-y-2"
               >
-                <h4 className="font-semibold text-sm mb-1 gradient-text">
-                  {card.label}
-                </h4>
-                <p className="text-xs text-text-muted">{card.items}</p>
+                <p className="eyebrow">{card.label}</p>
+                <p className="text-sm text-muted-foreground">{card.items}</p>
               </div>
             ))}
           </div>

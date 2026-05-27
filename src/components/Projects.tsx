@@ -48,79 +48,62 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 px-4 bg-surface/30">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Featured <span className="gradient-text">Works</span>
+    <section id="projects" className="px-6 py-24 sm:py-32 border-t border-white/[0.06]">
+      <div className="mx-auto max-w-5xl">
+        <div className="space-y-3 max-w-2xl mb-12">
+          <p className="eyebrow">Portfolio</p>
+          <h2 className="text-3xl font-medium tracking-tight sm:text-5xl">
+            Featured <span className="font-serif italic">works</span>
           </h2>
-          <p className="text-text-muted max-w-2xl mx-auto">
+          <p className="text-sm text-muted-foreground leading-relaxed mt-3">
             Projects I&apos;ve built and collaborated on
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mt-4" />
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {projects.map((project) => (
-            <div
+            <a
               key={project.title}
-              className="group rounded-xl bg-surface border border-border overflow-hidden hover:border-primary/50 transition-all duration-300 hover:-translate-y-1"
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group liquid-glass rounded-2xl p-5 space-y-3 hover:border-white/20 transition-all duration-200"
             >
-              <div className="h-48 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                <div className="text-4xl font-bold gradient-text opacity-30">
-                  {project.title.slice(0, 2)}
+              <div className="flex items-center justify-between">
+                <p className="eyebrow">{project.title}</p>
+                <div className="flex gap-2 text-muted-foreground group-hover:text-foreground transition-colors">
+                  <GithubIcon size={14} />
+                  <ExternalLink size={14} />
                 </div>
               </div>
 
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-lg font-semibold">{project.title}</h3>
-                  <div className="flex gap-2">
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-text-muted hover:text-text transition-colors"
-                      >
-                        <GithubIcon size={18} />
-                      </a>
-                    )}
-                    <ExternalLink
-                      size={18}
-                      className="text-text-muted group-hover:text-primary transition-colors"
-                    />
-                  </div>
-                </div>
+              <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                {project.description}
+              </p>
 
-                <p className="text-text-muted text-sm mb-4 line-clamp-3">
-                  {project.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2 py-0.5 text-xs rounded-full bg-primary/10 text-primary-light border border-primary/20"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+              <div className="flex flex-wrap gap-2 pt-1">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2 py-0.5 text-[10px] rounded-full border border-white/10 text-muted-foreground font-mono tracking-wider"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="mt-12">
           <a
             href="https://github.com/Ryjen1"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 border border-border hover:border-primary text-text font-medium rounded-lg transition-colors"
+            className="pill-btn pill-btn-ghost"
           >
-            View All Projects
-            <ExternalLink size={16} />
+            <span>View All Projects</span>
+            <span aria-hidden="true">↗</span>
           </a>
         </div>
       </div>

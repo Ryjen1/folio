@@ -21,17 +21,13 @@ export default function TechStack() {
   const doubled = [...techItems, ...techItems];
 
   return (
-    <section className="py-24 px-4 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Tech <span className="gradient-text">Stack</span>
+    <section className="py-24 sm:py-32 overflow-hidden border-t border-white/[0.06]">
+      <div className="mx-auto max-w-5xl mb-12 px-6">
+        <div className="space-y-3 max-w-2xl">
+          <p className="eyebrow">Arsenal</p>
+          <h2 className="text-3xl font-medium tracking-tight sm:text-5xl">
+            Tech <span className="font-serif italic">stack</span>
           </h2>
-          <p className="text-text-muted max-w-2xl mx-auto">
-            Technologies and tools I use to design, develop and deploy modern
-            full-stack applications.
-          </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mt-4" />
         </div>
       </div>
 
@@ -43,10 +39,10 @@ export default function TechStack() {
           {doubled.map((item, i) => (
             <div
               key={`${item.name}-${i}`}
-              className="flex-shrink-0 mx-3 px-5 py-3 rounded-xl bg-surface border border-border hover:border-primary/50 transition-colors"
+              className="flex-shrink-0 mx-3 px-5 py-3 rounded-full border border-white/[0.08] hover:border-white/20 transition-colors"
             >
-              <div className="text-sm font-semibold">{item.name}</div>
-              <div className="text-xs text-text-muted">{item.category}</div>
+              <div className="font-mono text-xs tracking-wider">{item.name}</div>
+              <div className="text-[10px] text-muted-foreground mt-0.5">{item.category}</div>
             </div>
           ))}
         </div>

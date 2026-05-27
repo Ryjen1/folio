@@ -25,36 +25,36 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border"
+          ? "liquid-glass border-b border-border"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="text-xl font-bold gradient-text">
+          <Link href="/" className="font-mono text-xs tracking-[0.3em] uppercase text-foreground">
             Emjay
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-text-muted hover:text-text transition-colors text-sm font-medium"
+                className="px-3 py-1.5 rounded-full font-mono text-[10px] tracking-[0.3em] uppercase transition-colors text-muted-foreground hover:text-foreground"
               >
                 {link.label}
               </a>
             ))}
             <a
               href="mailto:qweenjenny9@gmail.com"
-              className="px-4 py-2 bg-primary hover:bg-primary-light text-white text-sm font-medium rounded-lg transition-colors"
+              className="ml-2 pill-btn pill-btn-primary !py-1.5 !px-4 !text-[10px]"
             >
               Contact
             </a>
           </div>
 
           <button
-            className="md:hidden text-text-muted hover:text-text"
+            className="md:hidden text-muted-foreground hover:text-foreground"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -63,14 +63,14 @@ export default function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden bg-surface border-t border-border">
-          <div className="px-4 py-4 space-y-3">
+        <div className="md:hidden liquid-glass border-t border-border">
+          <div className="px-4 py-4 space-y-1">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="text-text-muted hover:text-text transition-colors block py-2 text-sm"
+                className="block px-3 py-2 rounded-full font-mono text-[10px] tracking-[0.3em] uppercase transition-colors text-muted-foreground hover:text-foreground"
               >
                 {link.label}
               </a>
@@ -78,7 +78,7 @@ export default function Navbar() {
             <a
               href="mailto:qweenjenny9@gmail.com"
               onClick={() => setMobileOpen(false)}
-              className="block text-center px-4 py-2 bg-primary hover:bg-primary-light text-white text-sm font-medium rounded-lg transition-colors"
+              className="block text-center pill-btn pill-btn-primary mt-3"
             >
               Contact
             </a>
