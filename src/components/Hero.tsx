@@ -12,6 +12,14 @@ export default function Hero() {
         Full Stack Developer · Web3 &amp; AI Explorer
       </p>
 
+      <div className="relative z-10 mb-6 sm:mb-8">
+        <img
+          src="/image.png"
+          alt="Maryjane Okafor"
+          className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border border-white/15"
+        />
+      </div>
+
       <h1 className="relative z-10 max-w-4xl text-center text-3xl leading-tight font-medium text-foreground sm:text-5xl md:text-7xl tracking-tight">
         Building digital <span className="font-serif italic">experiences</span> that ship.
       </h1>
