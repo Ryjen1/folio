@@ -1,3 +1,5 @@
+import Reveal from "@/components/Reveal";
+
 const skillCategories = [
   {
     title: "Frontend Development",
@@ -25,34 +27,35 @@ export default function Skills() {
   return (
     <section id="skills" className="px-6 py-24 sm:py-32 border-t border-white/[0.06]">
       <div className="mx-auto max-w-5xl">
-        <div className="space-y-3 max-w-2xl mb-12">
-          <p className="eyebrow">Expertise</p>
-          <h2 className="text-3xl font-medium tracking-tight sm:text-5xl">
-            Skills & <span className="font-serif italic">technologies</span>
-          </h2>
-        </div>
+        <Reveal>
+          <div className="space-y-3 max-w-2xl mb-12">
+            <p className="eyebrow">Expertise</p>
+            <h2 className="text-3xl font-medium tracking-tight sm:text-5xl">
+              Skills & <span className="font-serif italic">technologies</span>
+            </h2>
+          </div>
+        </Reveal>
 
         <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
-          {skillCategories.map((cat) => (
-            <div
-              key={cat.title}
-              className="liquid-glass rounded-2xl p-5 space-y-3 group hover:border-white/20 transition-colors"
-            >
-              <p className="eyebrow">{cat.title}</p>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {cat.description}
-              </p>
-              <div className="flex flex-wrap gap-2 pt-1">
-                {cat.skills.map((s) => (
-                  <span
-                    key={s}
-                    className="px-2.5 py-0.5 text-xs rounded-full border border-white/15 text-muted-foreground font-mono tracking-wider"
-                  >
-                    {s}
-                  </span>
-                ))}
+          {skillCategories.map((cat, i) => (
+            <Reveal key={cat.title} delay={i * 80}>
+              <div className="liquid-glass rounded-2xl p-5 space-y-3 group hover:border-white/20 transition-colors h-full">
+                <p className="eyebrow">{cat.title}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {cat.description}
+                </p>
+                <div className="flex flex-wrap gap-2 pt-1">
+                  {cat.skills.map((s) => (
+                    <span
+                      key={s}
+                      className="px-2.5 py-0.5 text-xs rounded-full border border-white/15 text-muted-foreground font-mono tracking-wider"
+                    >
+                      {s}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

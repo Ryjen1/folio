@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <rect width="800" height="450" fill="#0a0d14"/>
+  <rect x="40" y="40" width="720" height="40" rx="8" fill="#111827" opacity="0.6"/>
+  <circle cx="65" cy="60" r="6" fill="#ef4444" opacity="0.5"/>
+  <circle cx="85" cy="60" r="6" fill="#eab308" opacity="0.5"/>
+  <circle cx="105" cy="60" r="6" fill="#22c55e" opacity="0.5"/>
+  <rect x="40" y="100" width="340" height="310" rx="12" fill="#111827" opacity="0.4"/>
+  <rect x="420" y="100" width="340" height="145" rx="12" fill="#111827" opacity="0.4"/>
+  <rect x="420" y="265" width="340" height="145" rx="12" fill="#111827" opacity="0.4"/>
+  <text x="400" y="240" text-anchor="middle" fill="#7c8df0" font-family="monospace" font-size="18" opacity="0.6">BlockBelle</text>
+</svg>
