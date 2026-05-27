@@ -24,7 +24,7 @@ export default function TechStack() {
     <section className="py-24 sm:py-32 overflow-hidden border-t border-white/[0.06]">
       <div className="mx-auto max-w-5xl mb-12 px-6">
         <div className="space-y-3 max-w-2xl">
-          <p className="eyebrow">Arsenal</p>
+          <p className="eyebrow">Tech Stack</p>
           <h2 className="text-3xl font-medium tracking-tight sm:text-5xl">
             Tech <span className="font-serif italic">stack</span>
           </h2>
