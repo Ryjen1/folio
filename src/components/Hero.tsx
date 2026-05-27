@@ -17,7 +17,7 @@ export default function Hero() {
       </h1>
 
       <p className="relative z-10 mt-8 max-w-2xl text-center text-sm text-muted-foreground sm:mt-10 sm:text-base md:text-lg leading-relaxed">
-        I&apos;m Maryjane Okafor — a Full Stack Developer based in Lagos, Nigeria.
+        I&apos;m Maryjane Okafor, a Full Stack Developer based in Lagos, Nigeria.
         I specialize in React, Spring Boot, Solidity, and building decentralized
         applications that solve real-world problems.
       </p>
