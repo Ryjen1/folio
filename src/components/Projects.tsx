@@ -19,30 +19,9 @@ const projects = [
   {
     title: "WageShield",
     description:
-      "Confidential wage-theft claims platform built on Fhenix. Enables secure, private submission of workplace compensation disputes using FHE.",
+      "Confidential wage-theft claims platform built on Fhenix. Enables secure, private submission of workplace compensation disputes using fully homomorphic encryption.",
     tags: ["TypeScript", "FHE", "Fhenix", "Solidity"],
     github: "https://github.com/Ryjen1/WageShield",
-  },
-  {
-    title: "Kairo",
-    description:
-      "Aerodrome Safe LP Agent. Your agent acts, Kairo decides. Automated liquidity provision with intelligent decision-making on Aerodrome.",
-    tags: ["Solidity", "AI Agent", "DeFi", "Aerodrome"],
-    github: "https://github.com/Ryjen1/Kairo",
-  },
-  {
-    title: "VoxTrade",
-    description:
-      "Talk to your Solana wallet. Voice-native DeFi powered by ElevenLabs Conversational AI + Jupiter. Built for Dev3pack 2026.",
-    tags: ["TypeScript", "Solana", "AI", "Voice"],
-    github: "https://github.com/Ryjen1/voxtrade",
-  },
-  {
-    title: "ClarityDEX",
-    description:
-      "A decentralized exchange built on the Stacks blockchain using Clarity smart contracts. Features token swaps and liquidity pools.",
-    tags: ["TypeScript", "Clarity", "Stacks", "DeFi"],
-    github: "https://github.com/Ryjen1/ClarityDEX",
   },
 ];
 
